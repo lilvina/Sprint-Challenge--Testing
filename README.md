@@ -27,7 +27,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 1. In Jest, what are the differences between `describe()` and `it()` globals, and what are good uses for them?
 - Describe is used to label testing groups. It is used for testing one specific result.
 1. What is the point of `Test Driven Development`? What do you think about this approach?
-- To use TDD, you must first write your tests and test to see if what we wrote works. Our test will fail first because we have no code written. Once our code is written, we should make sure what we wrote will pass our test. If our code fails, then we refactor and check to see if our test works this time. TDD is good because it gives us clarity and direction for our code. It keeps us focused on what needs to too developed.
+- To use TDD, you must first write your tests and test to see if what we wrote works. Our test will fail first because we have no code written. Once our code is written, we should make sure what we wrote will pass our test. If our code fails, then we refactor and check to see if our test works this time. TDD is good because it gives us clarity and direction for our code. It keeps us focused on what needs to be developed.
 1. Mention three types of automated tests.
 - unit tests
 - integration tests

@@ -21,16 +21,9 @@ server.post('/games', (req, res) => {
   db('games_table')
   .insert(req.body)
   .then(response => {
-    const id = response
-    db('games_table')
-    .where({id})
-    .then(games => {
-      res.status(201).json(games)
-    }).catch(err => {
-      res.status(404).json(err)
-    })
+    res.status(201).json(response)
   }).catch(err => {
-    res.status(422).json({message: 'Please provide correct title and genre'})
+    res.status(422).json({message: 'Please provide title and genre'})
   })
 })
 
