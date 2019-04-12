@@ -1,6 +1,12 @@
 const request = require('supertest')
 const server = require('./server.js')
 
+const db = require('../data/dbConfig.js')
+
+beforeEach(async () => {
+  await db('games_table').truncate()
+})
+
 describe('server.js', () => {
   describe('GET /games', () => {
     it('should respond with 200 OK', () => {
@@ -15,7 +21,7 @@ describe('server.js', () => {
       return request(server)
       .get('/games')
       .then(response => {
-        expect(response.status).toEqual([])
+        expect(response.text).toEqual("[]")
       })
     })
   })
